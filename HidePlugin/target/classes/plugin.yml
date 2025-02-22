@@ -1,0 +1,18 @@
+name: HidePlugin
+version: '1.0'
+main: me.kzlyth.hidePlugin.HidePlugin
+api-version: '1.21'
+load: STARTUP
+authors: [Kzlyth]
+description: A Plugin that lets user hide their username
+website: https://discord.gg/UzZRpeEREq
+commands:
+  hide:
+    description: Hides the users name from other players
+    usage: /hide
+    permission: hide.use
+
+permissions:
+  hide.use:
+    description: Allows the user to hide their username
+    default: op
