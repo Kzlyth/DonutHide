@@ -43,7 +43,6 @@ public class HideCommand implements CommandExecutor {
         }
 
         if (hiddenPlayers.contains(player.getUniqueId())) {
-            // Spieler ist versteckt - mache ihn wieder sichtbar
             hiddenPlayers.remove(player.getUniqueId());
             player.setDisplayName(player.getName());
             player.setPlayerListName(player.getName());
@@ -54,7 +53,6 @@ public class HideCommand implements CommandExecutor {
 
             sendActionBar(player, "§aYou're not hidden anymore!");
         } else {
-            // Spieler ist sichtbar - verstecke ihn
             hiddenPlayers.add(player.getUniqueId());
             String randomName = "§k" + generateRandomString();
 
